@@ -1,4 +1,44 @@
 .App {
-  text-align: center;
-  background-color: #282c34;
+	text-align: center;
+	background-color: #282c34;
+}
+
+.fullScren {
+	height: 100vh;
+	width: 100vw;
+	color: white;
+	background-color: #282c34;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+}
+
+.productList {
+	grid-column: 1/3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.focus {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.focusList {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.focusProduct {
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+}
+
+.info {
+	height: 20vh;
 }
