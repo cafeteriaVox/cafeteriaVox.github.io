@@ -9,7 +9,7 @@
 	color: white;
 	background-color: #282c34;
 	display: grid;
-	grid-template-columns: repeat(3, auto);
+	grid-template-columns: repeat(3, calc(100vw/3));
 }
 
 .productList {
@@ -17,6 +17,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .focus {
@@ -41,4 +42,11 @@
 
 .info {
 	height: 20vh;
+}
+
+.productBox {
+	background-color: blueviolet;
+	padding: 2vh;
+	margin: 2vh;
+	border-radius: 9px;
 }
