@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import axios from 'axios';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
 type Product = {
 	name: string;
@@ -12,44 +11,47 @@ type Product = {
 };
 
 export default function FullScrenPage() {
+	const queryClient = new QueryClient();
+
 	return (
-		<div className="fullScren">
-			<div className='productList'>
-				{ProductList()}
-			</div>
-			<div className='focus'>
-				<div className='focusProduct'>
-					wating...
+		<QueryClientProvider client={queryClient}>
+			<div className="fullScren">
+				<div className='productList'>
+					<ProductList />
 				</div>
-				<div className='info'>
-					wating...
+				<div className='focus'>
+					<div className='focusProduct'>
+						wating...
+					</div>
+					<div className='info'>
+						wating...
+					</div>
 				</div>
 			</div>
-		</div>
+		</QueryClientProvider>
 	);
-	function ProductList() {
-		const [products, setProducts] = useState<Product[]>([]);
+}
 
-		useEffect(() => {
-			axios.get('https://raw.githubusercontent.com/cafeteriaVox/cafeteriaVox.github.io/dev/src/listProduct.json')
-				.then(response => {
-					const data = response.data;
-					console.log(data);
-					if (Array.isArray(data)) {
-						setProducts(data);
-					}
-				})
-				.catch(error => {
-					console.error(error);
-				});
-		}, []);
+function ProductList() {
+	const { data, isLoading, isError } = useQuery<Product[]>('products', async () => {
+		const response = await fetch('https://raw.githubusercontent.com/cafeteriaVox/cafeteriaVox.github.io/dev/src/listProduct.json');
+		const data = await response.json();
+		return data;
+	});
 
-		return (
-			<ul>
-				{products.map(product => (
-					<li key={product.name}>{product.name}</li>
-				))}
-			</ul>
-		);
+	if (isLoading) {
+		return <div>Loading...</div>;
 	}
+
+	if (isError) {
+		return <div>Error fetching products</div>;
+	}
+
+	return (
+		<ul>
+			{data?.map(product => (
+				<li key={product.name}>{product.name}</li>
+			))}
+		</ul>
+	);
 }
