@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
 type Product = {
@@ -8,6 +9,7 @@ type Product = {
 	margin: number;
 	color: string;
 	type: string;
+	image: string;
 };
 
 export default function FullScrenPage() {
@@ -21,7 +23,7 @@ export default function FullScrenPage() {
 				</div>
 				<div className='focus'>
 					<div className='focusProduct'>
-						wating...
+						<FocusProduct />
 					</div>
 					<div className='info'>
 						wating...
@@ -34,7 +36,7 @@ export default function FullScrenPage() {
 
 function ProductList() {
 	const { data, isLoading, isError } = useQuery<Product[]>('products', async () => {
-		const response = await fetch('https://raw.githubusercontent.com/cafeteriaVox/cafeteriaVox.github.io/dev/src/listProduct.json');
+		const response = await fetch('https://raw.githubusercontent.com/cafeteriaVox/cafeteriaVox.github.io/dev/src/product/listProduct.json');
 		const data = await response.json();
 		return data;
 	});
@@ -56,6 +58,38 @@ function ProductList() {
 	);
 }
 
-function focusProduct() {
+function FocusProduct() {
+	const [focusnumber, setFocusNumber] = useState(0);
+	const { data, isLoading, isError } = useQuery<Product[]>('products', async () => {
+		const response = await fetch('https://raw.githubusercontent.com/cafeteriaVox/cafeteriaVox.github.io/dev/src/product/listProduct.json');
+		const data = await response.json();
+		return data;
+	});
 
+	if (isLoading) {
+		return <div>Loading...</div>;
+	}
+
+	if (isError) {
+		return <div>Error fetching products</div>;
+	}
+
+	if (Array.isArray(data)) {
+		(data as Array<Product>).sort(() => Math.random() - 0.5);
+		let focusProduct = data[focusnumber];
+		console.log(focusProduct.image);
+		return <div className='focusProductBox'>
+			<div className='FocusProductImage'>
+				{focusProduct.image}
+			</div>
+			<div className='FocusProductName'>
+				{focusProduct.name}
+			</div>
+			<div className='FocusProductPrice'>
+				{focusProduct.price}
+			</div>
+		</div>
+	} else {
+		return <div>Erreur de type dans Focus Product</div>
+	}
 }

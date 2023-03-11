@@ -6,7 +6,8 @@
         "price": 0.50,
         "margin": 1,
         "color": "#7b4529",
-        "type": "product"
+        "type": "product",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/caf%C3%A9.jpeg?raw=true"
     },
     {
         "name": "thé",
@@ -15,7 +16,8 @@
         "price": 0.50,
         "margin": 0.25,
         "color": "#ef8203",
-        "type": "product"
+        "type": "product",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/th%C3%A9.jpeg?raw=true"
     },
     {
         "name": "capri sun",
@@ -24,7 +26,8 @@
         "price": 0.50,
         "margin": 0.25,
         "color": "#b1b0ae",
-        "type": "product"
+        "type": "product",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/capri-sun.jpeg?raw=true"
     },
     {
         "name": "eau",
@@ -33,7 +36,8 @@
         "price": 0.50,
         "margin": 0.25,
         "color": "#5eccd3",
-        "type": "product"
+        "type": "product",
+        "image": "https://raw.githubusercontent.com/cafeteriaVox/cafeteriaVox.github.io/dev/src/product/image/eau.webp"
     },
     {
         "name": "chocolat",
@@ -41,7 +45,8 @@
         "startingStock": 2000,
         "price": 0.50,
         "margin": 0.25,
-        "color": "#805538"
+        "color": "#805538",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/chocolat%20chaud.jpeg?raw=true"
     },
     {
         "name": "b-ready",
@@ -49,7 +54,8 @@
         "startingStock": 2000,
         "margin": 0.50,
         "price": 0.50,
-        "color": "#791d11"
+        "color": "#791d11",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/b-ready.jpeg?raw=true"
     },
     {
         "name": "coca",
@@ -57,7 +63,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#ca0a23"
+        "color": "#ca0a23",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/cocacola.jpeg?raw=true"
     },
     {
         "name": "coca chery",
@@ -65,7 +72,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#7a3150"
+        "color": "#7a3150",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/coca%20cherry.jpeg?raw=true"
     },
     {
         "name": "fanta",
@@ -73,7 +81,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#80c33c"
+        "color": "#80c33c",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/fanta.jpeg?raw=true"
     },
     {
         "name": "oasis",
@@ -81,7 +90,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#f17301"
+        "color": "#f17301",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/oasis.jpeg?raw=true"
     },
     {
         "name": "7up",
@@ -89,7 +99,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#008437"
+        "color": "#008437",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/7up.jpeg?raw=true"
     },
     {
         "name": "drPepper",
@@ -97,7 +108,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#ab2322"
+        "color": "#ab2322",
+        "image": "https://raw.githubusercontent.com/cafeteriaVox/cafeteriaVox.github.io/dev/src/product/image/dr%20peper.webp"
     },
     {
         "name": "lipton",
@@ -105,7 +117,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#b03500"
+        "color": "#b03500",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/lipton.jpeg?raw=true"
     },
     {
         "name": "orangina",
@@ -113,7 +126,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#f2d200"
+        "color": "#f2d200",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/orangina.jpeg?raw=true"
     },
     {
         "name": "kinder",
@@ -121,7 +135,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#d78e56"
+        "color": "#d78e56",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/kinder.jpeg?raw=true"
     },
     {
         "name": "oreo",
@@ -129,7 +144,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#032666"
+        "color": "#032666",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/orero.jpeg?raw=true"
     },
     {
         "name": "lion",
@@ -137,7 +153,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#270102"
+        "color": "#270102",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/lion.jpeg?raw=true"
     },
     {
         "name": "M&M\"s",
@@ -145,7 +162,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#f2c008"
+        "color": "#f2c008",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/m&m's.jpeg?raw=true"
     },
     {
         "name": "kit-kat",
@@ -153,7 +171,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#e13e13"
+        "color": "#e13e13",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/kitkat.png?raw=true"
     },
     {
         "name": "twix",
@@ -161,7 +180,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#ab8935"
+        "color": "#ab8935",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/twix.jpg?raw=true"
     },
     {
         "name": "snicker",
@@ -169,7 +189,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#0d3fb8"
+        "color": "#0d3fb8",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/snickers.jpeg?raw=true"
     },
     {
         "name": "malteser",
@@ -177,7 +198,8 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#f21d25"
+        "color": "#f21d25",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/maltesers.jpeg?raw=true"
     },
     {
         "name": "nutela Biscuit",
@@ -185,6 +207,7 @@
         "startingStock": 2000,
         "price": 1,
         "margin": 0.50,
-        "color": "#791d11"
+        "color": "#791d11",
+        "image": "https://github.com/cafeteriaVox/cafeteriaVox.github.io/blob/dev/src/product/image/nutella-biscuits.jpeg?raw=true"
     }
 ]
