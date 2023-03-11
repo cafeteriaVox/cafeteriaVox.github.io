@@ -16,7 +16,7 @@ export default function FullScrenPage() {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<div className="fullScren">
-				<div className='productList'>
+				<div>
 					<ProductList />
 				</div>
 				<div className='focus'>
@@ -48,10 +48,14 @@ function ProductList() {
 	}
 
 	return (
-		<ul>
+		<div className='productList'>
 			{data?.map(product => (
-				<li key={product.name}>{product.name}</li>
+				<div className='productBox' key={product.name}>{product.name}</div>
 			))}
-		</ul>
+		</div>
 	);
+}
+
+function focusProduct() {
+
 }
