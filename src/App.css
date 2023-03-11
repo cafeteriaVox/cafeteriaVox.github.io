@@ -1,13 +1,8 @@
-.App {
-	text-align: center;
-	background-color: #282c34;
-}
-
 .fullScren {
 	height: 100vh;
 	width: 100vw;
-	color: white;
-	background-color: #282c34;
+	color: black;
+	background-color: #f7f9fc;
 	display: grid;
 	grid-template-columns: repeat(3, calc(100vw/3));
 }
@@ -21,32 +16,53 @@
 }
 
 .focus {
-	height: 100vh;
+	height: 96vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-
-.focusList {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+	grid-column: 2/4;
+	padding: 2vh;
 }
 
 .focusProduct {
 	align-items: center;
 	justify-content: center;
-	height: 80vh;
+	padding: 2vh;
+	height: 44vh;
+	border-radius: 4vh;
+	background-color: #D9D9D9;
 }
 
-.info {
-	height: 20vh;
-}
+.info {}
 
 .productBox {
 	background-color: blueviolet;
 	padding: 2vh;
 	margin: 2vh;
 	border-radius: 9px;
+}
+
+.focusProductBox {
+	gap: 2vh;
+	padding: 2vh;
+	height: 40vh;
+	border-radius: 2vh;
+	display: flex;
+	color: white;
+	background-color: #3F3C3C;
+	align-items: center;
+}
+
+.FocusProductImage {
+	max-width: 19vw;
+	max-height: 19vw;
+	border-radius: 1vh;
+}
+
+.FocusProductName {
+	font-size: 8vw;
+}
+
+.FocusProductPrice {
+	font-size: 6vw;
 }

@@ -75,20 +75,22 @@ function FocusProduct() {
 	}
 
 	if (Array.isArray(data)) {
+		setInterval(() => {
+			setFocusNumber(focusnumber + 1 >= data.length - 1 ? 0 : focusnumber + 1);
+		}, 60000);
 		(data as Array<Product>).sort(() => Math.random() - 0.5);
 		let focusProduct = data[focusnumber];
-		console.log(focusProduct.image);
 		return <div className='focusProductBox'>
-			<div className='FocusProductImage'>
-				{focusProduct.image}
+			<img src={focusProduct.image} className='FocusProductImage' alt={focusProduct.image.split('/')[focusProduct.image.split('/').length - 2]} />
+			<div>
+				<div className='FocusProductName'>
+					{focusProduct.name}
+				</div>
+				<div className='FocusProductPrice'>
+					{focusProduct.price}€
+				</div>
 			</div>
-			<div className='FocusProductName'>
-				{focusProduct.name}
-			</div>
-			<div className='FocusProductPrice'>
-				{focusProduct.price}
-			</div>
-		</div>
+		</div >
 	} else {
 		return <div>Erreur de type dans Focus Product</div>
 	}
