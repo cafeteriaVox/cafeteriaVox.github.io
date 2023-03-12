@@ -20,5 +20,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
     - run: npm ci
     - run: npm run deploy
+    - run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        publish_branch: master
+        publish_dir: ./build
