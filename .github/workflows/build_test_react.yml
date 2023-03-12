@@ -23,8 +23,8 @@ jobs:
         
     - run: npm ci
     - run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "enee.prog@gmail.com"
+          git config --global user.name "UnelDev"
           
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
