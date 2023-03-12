@@ -1,34 +1,35 @@
-name: Deploy to GitHub Pages
+name: create-react-app
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  deploy:
+  build:
+
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-    - name: Node LTS versions
-      uses: msimerson/node-lts-versions@v1.1.1
-      env:
-        FORCE_COLOR: 0
+      uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        
-    - run: npm ci
-    - run: |
-          git config --global user.email "enee.prog@gmail.com"
-          git config --global user.name "UnelDev"
-          
-    - name: Deploy to GitHub Pages
+    - name: 'Installing deps'    
+      run: yarn
+#    - name: 'Test'
+#      run: yarn test
+    - name: 'Build'
+      run: yarn build #--if-present
+    - name: 'Deploy'
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        publish_branch: master
+        deploy_key: ${{ secrets.PERSONAL_TOKEN  }}
         publish_dir: ./build
+        allow_empty_commit: true
