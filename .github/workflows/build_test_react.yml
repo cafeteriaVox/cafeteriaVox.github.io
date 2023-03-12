@@ -22,7 +22,6 @@ jobs:
         cache: 'npm'
         
     - run: npm ci
-    - run: npm run deploy
     - run: |
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
