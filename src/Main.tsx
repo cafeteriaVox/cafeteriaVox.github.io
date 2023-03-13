@@ -12,7 +12,7 @@ type Product = {
 	image: string;
 };
 
-export default function FullScrenPage() {
+export default function Main() {
 	const queryClient = new QueryClient();
 
 	return (
